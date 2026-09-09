@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>High Voltage Cable Systems | Instalación de Alta Tensión · Madrid</title>
+<meta name="description" content="Especialistas en montaje e instalación de sistemas de cable de Media, Alta y Extra Alta Tensión hasta 220 kV."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Paleta tomada directamente del logo */
+  --navy:#1A2845; --navy-2:#23527C; --blue:#1C55A2; --blue-mid:#3881C5;
+  --accent:#77CCF3; --accent-deep:#1C55A2;
+  --bg:#FFFFFF; --bg-2:#F4F8FC; --bg-3:#E8F1F9;
+  --border:#DCE6F0; --border-2:#C7D7E6;
+  --ink:#1A2845; --text:#33465A; --muted:#5C7183; --white:#FFFFFF;
+  --shadow:0 1px 2px rgba(26,40,69,.04),0 8px 24px rgba(26,40,69,.06);
+  --shadow-lg:0 4px 8px rgba(26,40,69,.05),0 20px 48px rgba(26,40,69,.12);
+  --r:14px; --r-sm:10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px}
+::-webkit-scrollbar{width:10px} ::-webkit-scrollbar-track{background:var(--bg-2)} ::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:99px;border:3px solid var(--bg-2)}
+::selection{background:var(--accent);color:var(--navy)}
+img{max-width:100%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+nav.scrolled{box-shadow:0 1px 24px rgba(26,40,69,.07);border-bottom-color:var(--border)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand-mark{height:38px;width:auto;display:block}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-size:.78rem;font-weight:600;letter-spacing:.13em;color:var(--navy);text-transform:uppercase}
+.brand-txt span{font-size:.63rem;font-weight:500;letter-spacing:.19em;color:var(--blue-mid);text-transform:uppercase}
+.nav-links{display:flex;list-style:none;gap:.15rem}
+.nav-links a{display:block;padding:.5rem .9rem;text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.02em;color:var(--muted);border-radius:99px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--navy);background:var(--bg-2)}
+.nav-links a.active{color:var(--blue);background:var(--bg-3)}
+.nav-contact{font-size:.8rem;font-weight:600;text-decoration:none;color:var(--white);background:var(--blue);padding:.62rem 1.35rem;border-radius:99px;box-shadow:0 2px 10px rgba(28,85,162,.24);transition:background .2s,transform .15s,box-shadow .2s}
+.nav-contact:hover{background:var(--navy);transform:translateY(-1px);box-shadow:0 6px 18px rgba(28,85,162,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:10px}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob-menu{display:none;position:fixed;top:78px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:999;box-shadow:var(--shadow)}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;padding:1rem 5vw;font-size:.95rem;font-weight:500;color:var(--text);text-decoration:none;border-bottom:1px solid var(--bg-2)}
+.mob-menu a:hover{color:var(--blue);background:var(--bg-2)}
+
+/* COMPARTIDO */
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:1rem}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
+.section-h2{font-family:"DM Serif Display",serif;font-size:clamp(2.1rem,3.8vw,3.3rem);font-weight:400;color:var(--navy);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* HERO */
+#inicio{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding-top:78px}
+.hero-photo{position:absolute;inset:0;background-size:cover;background-position:center 20%;filter:brightness(.62) saturate(1.05)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,40,69,.42) 0%,rgba(26,40,69,.34) 38%,rgba(26,40,69,.82) 82%,var(--white) 100%)}
+.hero-inner{position:relative;z-index:2;padding:8vw 5vw 5rem;max-width:1200px;margin:0 auto;width:100%}
+.hero-kv{font-size:.74rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:1.6rem;display:flex;align-items:center;gap:12px}
+.hero-kv::before{content:"";width:32px;height:2px;background:var(--accent);border-radius:2px}
+.hero-h1{font-family:"DM Serif Display",serif;font-size:clamp(2.9rem,7.2vw,7rem);font-weight:400;color:var(--white);line-height:1.03;letter-spacing:-.02em;margin-bottom:1.8rem;text-shadow:0 2px 30px rgba(10,20,40,.35)}
+.hero-h1 em{font-style:italic;color:var(--accent)}
+.hero-bottom{display:grid;grid-template-columns:1fr auto;align-items:end;gap:3rem}
+.hero-desc{font-size:clamp(.95rem,1.2vw,1.08rem);font-weight:400;color:rgba(255,255,255,.9);max-width:460px;line-height:1.75}
+.hero-actions{display:flex;flex-direction:column;gap:.9rem;align-items:flex-end}
+.btn-primary{background:var(--white);color:var(--navy);padding:.9rem 2rem;text-decoration:none;font-size:.85rem;font-weight:600;border-radius:99px;box-shadow:0 6px 22px rgba(10,20,40,.28);transition:background .2s,transform .15s,color .2s;display:inline-block}
+.btn-primary:hover{background:var(--accent);color:var(--navy);transform:translateY(-2px)}
+.btn-secondary{color:rgba(255,255,255,.82);font-size:.85rem;font-weight:500;text-decoration:none;transition:color .2s}
+.btn-secondary:hover{color:var(--accent)}
+
+/* CIFRAS */
+.stats-strip{position:relative;z-index:3;background:var(--white);padding:0 5vw;margin-top:-1px}
+.stats-strip-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1.2rem 0 2.4rem}
+.stat{padding:1.6rem;background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);transition:transform .2s,box-shadow .2s}
+.stat:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.stat-n{font-family:"DM Serif Display",serif;font-size:2.7rem;font-weight:400;color:var(--blue);line-height:1;letter-spacing:-.02em}
+.stat-l{font-size:.78rem;color:var(--muted);margin-top:.45rem;line-height:1.4}
+
+/* NOSOTROS */
+#nosotros{padding:6.5rem 5vw;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:5fr 4fr;gap:5.5rem;align-items:center}
+.about-body p{font-size:1rem;line-height:1.85;color:var(--text);margin-bottom:1.1rem;font-weight:400}
+.about-photo{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg)}
+.about-photo img{width:100%;height:520px;object-fit:cover;display:block}
+.about-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,rgba(26,40,69,0),rgba(26,40,69,.92));color:rgba(255,255,255,.85);padding:2.4rem 1.3rem 1rem;font-size:.8rem;display:flex;justify-content:space-between;align-items:center}
+.about-caption strong{color:var(--accent);font-weight:600}
+
+/* IDENTIDAD */
+#identidad{padding:6.5rem 5vw;background:var(--bg-2)}
+.mv-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
+.mv-card{background:var(--white);padding:2.4rem;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
+.mv-label{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.mv-label::after{content:"";flex:1;height:1px;background:var(--border)}
+.mv-text{font-size:1rem;line-height:1.8;font-weight:400;color:var(--text)}
+.valores{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:1.2rem}
+.val{background:var(--white);padding:1.5rem 1rem;text-align:center;border:1px solid var(--border);border-radius:var(--r-sm);transition:background .2s,transform .2s,border-color .2s}
+.val:hover{background:var(--bg-3);border-color:var(--blue-mid);transform:translateY(-3px)}
+.val-ico{font-size:1.5rem;display:block;margin-bottom:.5rem}
+.val-name{font-size:.8rem;font-weight:600;color:var(--navy)}
+
+/* SERVICIOS */
+#servicios{padding:6.5rem 5vw;background:var(--white)}
+.serv-layout{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.serv-sticky{position:sticky;top:110px}
+.serv-intro-text{font-size:1rem;line-height:1.8;font-weight:400;color:var(--muted);margin-top:1rem}
+.serv-list{display:grid;gap:.9rem}
+.serv-item{background:var(--bg-2);padding:1.6rem 1.8rem;display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:start;border:1px solid var(--border);border-radius:var(--r);transition:border-color .2s,background .2s,transform .2s,box-shadow .2s}
+.serv-item:hover{background:var(--white);border-color:var(--blue-mid);transform:translateX(5px);box-shadow:var(--shadow)}
+.serv-num{font-family:"DM Serif Display",serif;font-size:1.6rem;color:var(--border-2);line-height:1;margin-top:1px;transition:color .2s}
+.serv-item:hover .serv-num{color:var(--blue-mid)}
+.serv-name{font-size:1.02rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
+.serv-desc{font-size:.9rem;line-height:1.65;color:var(--muted);font-weight:400}
+
+/* EXPERIENCIA */
+#experiencia{padding:6.5rem 5vw;background:var(--navy)}
+.exp-eyebrow{color:var(--accent)} .exp-eyebrow::before{background:var(--accent)}
+.exp-h2{color:var(--white)} .exp-h2 em{font-style:italic;color:var(--accent)}
+.exp-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:3rem 0 4rem}
+.exp-num-item{padding:2.2rem 1.8rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r)}
+.exp-big{font-family:"DM Serif Display",serif;font-size:clamp(2.8rem,5vw,4.6rem);font-weight:400;color:var(--white);line-height:1;letter-spacing:-.03em}
+.exp-big span{color:var(--accent);font-size:.5em;vertical-align:super}
+.exp-num-label{font-size:.78rem;color:rgba(255,255,255,.62);margin-top:.6rem;line-height:1.4}
+.exp-cols{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.exp-col-ttl{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.14);margin-bottom:1.3rem}
+.fabs{display:flex;flex-wrap:wrap;gap:.5rem}
+.fab{padding:.38rem .85rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:99px;font-size:.8rem;color:rgba(255,255,255,.85)}
+.paises-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.pais-tag{display:flex;align-items:center;gap:5px;padding:.38rem .85rem;background:rgba(119,204,243,.12);border:1px solid rgba(119,204,243,.32);border-radius:99px;font-size:.8rem;color:rgba(255,255,255,.9)}
+.cli-list{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem}
+.cli{font-size:.9rem;color:rgba(255,255,255,.78);padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:9px;font-weight:400}
+.cli::before{content:"";width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0}
+
+/* PROYECTOS */
+#proyectos{padding:6.5rem 5vw;background:var(--bg-2)}
+.proy-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.filters{display:flex;gap:.4rem;flex-wrap:wrap}
+.fb{padding:.5rem 1.1rem;background:var(--white);border:1px solid var(--border);border-radius:99px;color:var(--muted);font-size:.82rem;font-weight:500;cursor:pointer;font-family:"Inter",sans-serif;transition:background .2s,color .2s,border-color .2s}
+.fb:hover{border-color:var(--blue-mid);color:var(--blue)}
+.fb.active{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.proy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:box-shadow .25s,transform .25s,border-color .25s}
+.pc:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--blue-mid)}
+.pc-img-wrap{overflow:hidden;position:relative}
+.pc-img{width:100%;height:205px;object-fit:cover;display:block;transition:transform .5s}
+.pc:hover .pc-img{transform:scale(1.05)}
+.pc-year{position:absolute;top:.8rem;left:.8rem;background:rgba(26,40,69,.85);backdrop-filter:blur(4px);color:var(--white);font-size:.72rem;font-weight:600;padding:.28rem .7rem;border-radius:99px}
+.pc-kv{position:absolute;top:.8rem;right:.8rem;background:var(--accent);color:var(--navy);font-size:.78rem;font-weight:600;padding:.28rem .7rem;border-radius:99px}
+.pc-body{padding:1.3rem 1.4rem 1.5rem}
+.pc-loc{font-size:.78rem;font-weight:500;color:var(--muted);margin-bottom:.4rem}
+.pc-cliente{font-family:"DM Serif Display",serif;font-size:1.4rem;color:var(--navy);margin-bottom:.25rem;line-height:1.2}
+.pc-fab{font-size:.82rem;color:var(--muted);margin-bottom:.9rem}
+.pc-alcance{font-size:.86rem;color:var(--navy);font-weight:500;padding:.6rem .8rem;background:var(--bg-3);border-radius:var(--r-sm)}
+.pc-hint{font-size:.8rem;font-weight:500;color:var(--blue);text-align:right;margin-top:.75rem}
+
+/* GALERIA */
+#galeria-real{padding:6.5rem 5vw;background:var(--white)}
+.gal-intro{max-width:580px;margin-bottom:3rem}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px}
+.gal-item{overflow:hidden;cursor:pointer;position:relative;background:var(--bg-3);border-radius:var(--r-sm)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item.wide{grid-column:span 2}
+.gal-item.tall{grid-row:span 2}
+.gal-item.big{grid-column:span 2;grid-row:span 2}
+.gal-item-over{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,40,69,0) 45%,rgba(26,40,69,.8));opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:1rem}
+.gal-item:hover .gal-item-over{opacity:1}
+.gal-item-tag{font-size:.82rem;font-weight:600;color:var(--white)}
+
+/* LIGHTBOX */
+.lb-ov{position:fixed;inset:0;z-index:3000;background:rgba(12,20,36,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
+.lb-ov.open{opacity:1;pointer-events:all}
+.lb-img{max-width:90vw;max-height:88vh;object-fit:contain;display:block;border-radius:var(--r-sm);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.1);border:none;color:var(--white);font-size:1.4rem;width:44px;height:44px;border-radius:50%;cursor:pointer;line-height:1;transition:background .2s}
+.lb-close:hover{background:rgba(255,255,255,.24)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:var(--white);font-size:2rem;width:52px;height:52px;border-radius:50%;cursor:pointer;transition:background .2s;line-height:1;display:flex;align-items:center;justify-content:center}
+.lb-prev{left:1.5rem} .lb-next{right:1.5rem}
+.lb-prev:hover,.lb-next:hover{background:rgba(255,255,255,.24)}
+.lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:.85rem;font-weight:500;color:rgba(255,255,255,.7)}
+
+/* CALIDAD */
+#calidad{padding:6.5rem 5vw;background:var(--bg-2)}
+.cal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.cal-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--blue-mid);border-radius:var(--r);padding:1.8rem;box-shadow:var(--shadow)}
+.cal-ttl{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.2rem;font-weight:400}
+.cal-list{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.cal-list li{font-size:.92rem;line-height:1.6;color:var(--text);font-weight:400;display:flex;gap:11px}
+.cal-list li::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:.45rem}
+
+/* CONTACTO */
+#contacto{padding:6.5rem 5vw;background:var(--white)}
+.cnt-inner{max-width:860px;margin:0 auto;text-align:center}
+.cnt-sub{font-size:1.02rem;font-weight:400;color:var(--muted);max-width:540px;margin:.9rem auto 3rem;line-height:1.8}
+.cnt-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.4rem}
+.cnt-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);padding:1.9rem 2rem;text-align:left;transition:border-color .2s,box-shadow .2s,transform .2s}
+.cnt-card:hover{border-color:var(--blue-mid);box-shadow:var(--shadow);transform:translateY(-3px)}
+.cnt-role{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:.5rem}
+.cnt-name{font-family:"DM Serif Display",serif;font-size:1.6rem;color:var(--navy);margin-bottom:.4rem;font-weight:400}
+.cnt-phone a{font-size:1rem;font-weight:500;color:var(--blue);text-decoration:none;transition:color .2s}
+.cnt-phone a:hover{color:var(--navy)}
+.cnt-email{display:inline-block;padding:1rem 2.4rem;background:var(--blue);color:var(--white);text-decoration:none;font-size:.95rem;font-weight:600;border-radius:99px;box-shadow:0 6px 20px rgba(28,85,162,.26);transition:background .2s,transform .15s}
+.cnt-email:hover{background:var(--navy);transform:translateY(-2px)}
+
+/* PIE */
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:2.2rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-logo{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.9}
+.foot-r{font-size:.82rem}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;z-index:2000;background:rgba(26,40,69,.6);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal-ov.open{opacity:1;pointer-events:all}
+.modal{background:var(--white);max-width:660px;width:100%;max-height:90vh;overflow-y:auto;border-radius:var(--r);box-shadow:0 32px 80px rgba(26,40,69,.3);transform:translateY(14px) scale(.98);transition:transform .25s}
+.modal-ov.open .modal{transform:none}
+.modal-img{width:100%;height:240px;object-fit:cover;display:block}
+.modal-body{padding:2rem 2.2rem 2.2rem}
+.modal-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+.modal-close{background:var(--bg-2);border:none;cursor:pointer;color:var(--muted);font-size:1rem;width:36px;height:36px;border-radius:50%;line-height:1;transition:background .2s,color .2s;flex-shrink:0}
+.modal-close:hover{background:var(--bg-3);color:var(--navy)}
+.modal-title{font-family:"DM Serif Display",serif;font-size:2rem;color:var(--navy);line-height:1.1;font-weight:400}
+.modal-loc{font-size:.88rem;color:var(--blue);font-weight:500;margin-top:.3rem}
+.modal-fields{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1rem}
+.mfield{padding:.85rem 1rem;background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-sm)}
+.mf-l{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.25rem}
+.mf-v{font-size:.95rem;font-weight:600;color:var(--navy)}
+.mf-gold{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--blue);font-weight:400}
+.modal-alc{padding:1.1rem 1.2rem;background:var(--bg-3);border-left:4px solid var(--blue-mid);border-radius:var(--r-sm)}
+.modal-alc .mf-l{color:var(--blue)} .modal-alc .mf-v{color:var(--navy);margin-bottom:.5rem}
+.modal-desc{font-size:.92rem;line-height:1.7;color:var(--text);font-weight:400}
+
+/* APARICION */
+.r{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.r.v{opacity:1;transform:none}
+.r1{transition-delay:.05s} .r2{transition-delay:.12s} .r3{transition-delay:.19s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.about-grid{grid-template-columns:1fr;gap:3rem}.serv-layout{grid-template-columns:1fr;gap:3rem}.serv-sticky{position:static}.proy-grid{grid-template-columns:repeat(2,1fr)}.gal-grid{grid-template-columns:repeat(2,1fr)}.gal-item.big{grid-column:span 2}.exp-cols{gap:2.5rem}}
+@media(max-width:768px){.nav-links,.nav-contact{display:none}.hamburger{display:flex}.brand-txt b{font-size:.72rem}.brand-txt span{font-size:.58rem}.hero-bottom{grid-template-columns:1fr;gap:1.8rem}.hero-actions{align-items:flex-start}.stats-strip-inner{grid-template-columns:repeat(2,1fr)}.mv-row{grid-template-columns:1fr}.valores{grid-template-columns:repeat(3,1fr)}.exp-nums{grid-template-columns:repeat(2,1fr)}.exp-cols,.cnt-cards,.cal-grid,.modal-fields{grid-template-columns:1fr;gap:1.5rem}.proy-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.gal-item.wide,.gal-item.tall,.gal-item.big{grid-column:span 1;grid-row:span 1}.cli-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none}}
+
+/* ============================================================
+   IDIOMA  ·  LANGUAGE
+   Cada texto existe dos veces: <span class="es"> y <span class="en">.
+   El atributo lang del <html> decide cual se ve. No borres ninguno
+   de los dos: si quitas uno, ese idioma se queda sin ese texto.
+   ============================================================ */
+html[lang="es"] .en{display:none!important}
+html[lang="en"] .es{display:none!important}
+
+.nav-right{display:flex;align-items:center;gap:.55rem}
+.lang{display:flex;gap:.35rem;align-items:center}
+.lang-b{background:none;border:1.5px solid var(--border);border-radius:5px;padding:0;width:34px;height:23px;cursor:pointer;overflow:hidden;line-height:0;opacity:.45;transition:opacity .2s,border-color .2s,transform .15s,box-shadow .2s}
+.lang-b:hover{opacity:1;transform:translateY(-1px)}
+.lang-b.active{opacity:1;border-color:var(--blue-mid);box-shadow:0 0 0 2px rgba(56,129,197,.18)}
+.lang-b svg{width:100%;height:100%;display:block}
+@media(max-width:768px){.lang-b{width:30px;height:21px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#inicio" class="brand"><img src="img/logo-simbolo.png" alt="High Voltage Cable Systems" class="brand-mark"/><span class="brand-txt"><b>High Voltage</b><span>Cable Systems</span></span></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#nosotros" data-s="nosotros"><span class="es">Nosotros</span><span class="en">About us</span></a></li>
+      <li><a href="#servicios" data-s="servicios"><span class="es">Servicios</span><span class="en">Services</span></a></li>
+      <li><a href="#experiencia" data-s="experiencia"><span class="es">Experiencia</span><span class="en">Experience</span></a></li>
+      <li><a href="#proyectos" data-s="proyectos"><span class="es">Proyectos</span><span class="en">Projects</span></a></li>
+      <li><a href="#galeria-real" data-s="galeria-real"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
+      <li><a href="#calidad" data-s="calidad"><span class="es">Calidad</span><span class="en">Quality</span></a></li>
+    </ul>
+    <a href="#contacto" class="nav-contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
+    <div class="lang">
+      <button class="lang-b active" id="langEs" onclick="setLang('es')" aria-label="Español" title="Español"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/></svg></button>
+      <button class="lang-b" id="langEn" onclick="setLang('en')" aria-label="English" title="English"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="ukc"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></button>
+    </div>
+    <button class="hamburger" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mob">
+  <a href="#nosotros" onclick="cMob()"><span class="es">Nosotros</span><span class="en">About us</span></a>
+  <a href="#servicios" onclick="cMob()"><span class="es">Servicios</span><span class="en">Services</span></a>
+  <a href="#experiencia" onclick="cMob()"><span class="es">Experiencia</span><span class="en">Experience</span></a>
+  <a href="#proyectos" onclick="cMob()"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+  <a href="#galeria-real" onclick="cMob()"><span class="es">Galería</span><span class="en">Gallery</span></a>
+  <a href="#calidad" onclick="cMob()"><span class="es">Calidad</span><span class="en">Quality</span></a>
+  <a href="#contacto" onclick="cMob()" style="color:var(--blue);font-weight:600"><span class="es">Contacto</span><span class="en">Contact</span></a>
+</div>
+
+<section id="inicio">
+  <div class="hero-photo" id="heroPhoto"></div>
+  <div class="hero-inner">
+    <div class="hero-kv"><span class="es">Madrid · Europa · África · Latinoamérica</span><span class="en">Madrid · Europe · Africa · Latin America</span></div>
+    <h1 class="hero-h1"><span class="es">Instalación de<br/>sistemas de<br/><em>Alta Tensión</em></span><span class="en">Installation of<br/><em>High Voltage</em><br/>cable systems</span></h1>
+    <div class="hero-bottom">
+      <p class="hero-desc"><span class="es">Especialistas en montaje, instalación y puesta en marcha de sistemas de cable de Media, Alta y Extra Alta Tensión hasta 220 kV.</span><span class="en">Specialists in the assembly, installation and commissioning of Medium, High and Extra High Voltage cable systems up to 220 kV.</span></p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn-primary"><span class="es">Ver proyectos</span><span class="en">View projects</span></a>
+        <a href="#contacto" class="btn-secondary"><span class="es">Solicitar presupuesto →</span><span class="en">Request a quote →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="stat"><div class="stat-n">+20</div><div class="stat-l"><span class="es">Proyectos ejecutados</span><span class="en">Projects delivered</span></div></div>
+    <div class="stat"><div class="stat-n">8</div><div class="stat-l"><span class="es">Países · 3 continentes</span><span class="en">Countries · 3 continents</span></div></div>
+    <div class="stat"><div class="stat-n">220 kV</div><div class="stat-l"><span class="es">Tensión máx. certificada</span><span class="en">Max. certified voltage</span></div></div>
+    <div class="stat"><div class="stat-n">+10</div><div class="stat-l"><span class="es">Profesionales cualificados</span><span class="en">Qualified professionals</span></div></div>
+  </div>
+</div>
+
+<section id="nosotros">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="r">
+        <div class="eyebrow"><span class="es">Quiénes somos</span><span class="en">Who we are</span></div>
+        <h2 class="section-h2"><span class="es">Expertos en cable subterráneo de <em>alta tensión</em></span><span class="en">Experts in underground <em>high voltage</em> cable</span></h2>
+        <div class="about-body">
+          <p class="es">High Voltage Cable Systems es una empresa española con sede en Madrid, especializada en el montaje, instalación y puesta en marcha de sistemas de cable de Media, Alta y Extra Alta Tensión.</p>
+          <p class="en">High Voltage Cable Systems is a Spanish company based in Madrid, specialising in the assembly, installation and commissioning of Medium, High and Extra High Voltage cable systems.</p>
+          <p class="es">Contamos con un equipo de más de 10 profesionales altamente cualificados, certificados para trabajos de hasta 220 kV, con amplia experiencia en proyectos nacionales e internacionales de subestaciones, redes de transmisión y distribución e infraestructuras eléctricas críticas.</p>
+          <p class="en">Our team of more than 10 highly qualified professionals is certified for work up to 220 kV, with extensive experience in national and international projects covering substations, transmission and distribution networks, and critical electrical infrastructure.</p>
+          <p class="es">Somos especialistas en instalación de accesorios para cables subterráneos de alta tensión, sistemas de puesta a tierra y supervisión de tendido, trabajando con fabricantes líderes como TE Connectivity (Raychem/TYCO), PFISTERER y NKT.</p>
+          <p class="en">We specialise in installing accessories for underground high voltage cables, earthing systems and cable pulling supervision, working with leading manufacturers such as TE Connectivity (Raychem/TYCO), PFISTERER and NKT.</p>
+          <p class="es">Prestamos servicios a fabricantes, contratistas EPC, compañías eléctricas, promotores de energías renovables y operadores de infraestructuras críticas en Europa, África y Latinoamérica.</p>
+          <p class="en">We serve manufacturers, EPC contractors, utilities, renewable energy developers and critical infrastructure operators across Europe, Africa and Latin America.</p>
+        </div>
+      </div>
+      <div class="about-photo r r1">
+        <img id="aboutImg" loading="lazy" alt="132 kV installation — High Voltage Cable Systems"/>
+        <div class="about-caption"><span><span class="es">Subestación 132 kV</span><span class="en">132 kV substation</span></span><strong>Nicaragua</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="identidad">
+  <div class="wrap r">
+    <div class="eyebrow"><span class="es">Nuestra identidad</span><span class="en">Our identity</span></div>
+    <h2 class="section-h2"><span class="es">Misión, visión <em>y valores</em></span><span class="en">Mission, vision <em>and values</em></span></h2>
+    <div class="mv-row">
+      <div class="mv-card">
+        <div class="mv-label"><span class="es">Misión</span><span class="en">Mission</span></div>
+        <p class="mv-text es">Proporcionar soluciones especializadas para la instalación y puesta en servicio de sistemas de cable de Media, Alta y Extra Alta Tensión, garantizando los más altos estándares de seguridad, calidad y excelencia técnica.</p>
+        <p class="mv-text en">To provide specialised solutions for the installation and commissioning of Medium, High and Extra High Voltage cable systems, guaranteeing the highest standards of safety, quality and technical excellence.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-label"><span class="es">Visión</span><span class="en">Vision</span></div>
+        <p class="mv-text es">Ser una empresa de referencia internacional en la instalación de sistemas de cable de Alta Tensión, reconocida por la excelencia técnica de nuestro equipo, la confianza de nuestros clientes y la capacidad de ejecutar proyectos complejos en cualquier parte del mundo.</p>
+        <p class="mv-text en">To be an international benchmark in High Voltage cable system installation, recognised for the technical excellence of our team, the trust of our clients and our ability to deliver complex projects anywhere in the world.</p>
+      </div>
+    </div>
+    <div class="valores">
+      <div class="val"><span class="val-ico">🦺</span><span class="val-name"><span class="es">Seguridad</span><span class="en">Safety</span></span></div>
+      <div class="val"><span class="val-ico">✅</span><span class="val-name"><span class="es">Calidad</span><span class="en">Quality</span></span></div>
+      <div class="val"><span class="val-ico">🤝</span><span class="val-name"><span class="es">Integridad</span><span class="en">Integrity</span></span></div>
+      <div class="val"><span class="val-ico">🎯</span><span class="val-name"><span class="es">Compromiso</span><span class="en">Commitment</span></span></div>
+      <div class="val"><span class="val-ico">📈</span><span class="val-name"><span class="es">Excelencia</span><span class="en">Excellence</span></span></div>
+      <div class="val"><span class="val-ico">👥</span><span class="val-name"><span class="es">Equipo</span><span class="en">Teamwork</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="serv-layout">
+      <div class="serv-sticky r">
+        <div class="eyebrow"><span class="es">Servicios</span><span class="en">Services</span></div>
+        <h2 class="section-h2"><span class="es">Soluciones técnicas <em>especializadas</em></span><span class="en">Specialised <em>technical solutions</em></span></h2>
+        <p class="serv-intro-text"><span class="es">Cubrimos el ciclo completo de instalación de sistemas de cable subterráneo de Media, Alta y Extra Alta Tensión, desde los accesorios de empalme hasta la puesta en servicio.</span><span class="en">We cover the full installation cycle for Medium, High and Extra High Voltage underground cable systems, from joint accessories through to commissioning.</span></p>
+      </div>
+      <div class="serv-list r r1">
+        <div class="serv-item"><div class="serv-num">01</div><div><div class="serv-name"><span class="es">Instalación de terminales GIS</span><span class="en">GIS termination installation</span></div><p class="serv-desc"><span class="es">Terminales para gas insulated switchgear en subestaciones de alta y extra alta tensión hasta 220 kV.</span><span class="en">Terminations for gas insulated switchgear in high and extra high voltage substations up to 220 kV.</span></p></div></div>
+        <div class="serv-item"><div class="serv-num">02</div><div><div class="serv-name"><span class="es">Terminales exteriores</span><span class="en">Outdoor terminations</span></div><p class="serv-desc"><span class="es">Montaje de terminales exteriores para conexión de cables subterráneos con líneas aéreas de alta tensión.</span><span class="en">Assembly of outdoor terminations connecting underground cables to high voltage overhead lines.</span></p></div></div>
+        <div class="serv-item"><div class="serv-num">03</div><div><div class="serv-name"><span class="es">Empalmes MT/AT</span><span class="en">MV/HV joints</span></div><p class="serv-desc"><span class="es">Instalación de empalmes de media y alta tensión en redes subterráneas de transmisión y distribución.</span><span class="en">Installation of medium and high voltage joints in underground transmission and distribution networks.</span></p></div></div>
+        <div class="serv-item"><div class="serv-num">04</div><div><div class="serv-name"><span class="es">Sistemas de puesta a tierra</span><span class="en">Earthing systems</span></div><p class="serv-desc"><span class="es">Diseño y montaje de sistemas de puesta a tierra para cables subterráneos de alta tensión.</span><span class="en">Design and assembly of earthing systems for underground high voltage cables.</span></p></div></div>
+        <div class="serv-item"><div class="serv-num">05</div><div><div class="serv-name"><span class="es">Supervisión de tendidos</span><span class="en">Cable pulling supervision</span></div><p class="serv-desc"><span class="es">Supervisión técnica del tendido de cables subterráneos por instaladores certificados por fabricante.</span><span class="en">Technical supervision of underground cable pulling by manufacturer-certified installers.</span></p></div></div>
+        <div class="serv-item"><div class="serv-num">06</div><div><div class="serv-name"><span class="es">Asistencia técnica internacional</span><span class="en">International technical assistance</span></div><p class="serv-desc"><span class="es">Soporte técnico in situ en proyectos en Europa, África y Latinoamérica para EPCs y utilities.</span><span class="en">On-site technical support for projects across Europe, Africa and Latin America for EPCs and utilities.</span></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="r"><div class="eyebrow exp-eyebrow"><span class="es">Experiencia internacional</span><span class="en">International experience</span></div><h2 class="section-h2 exp-h2"><span class="es">Presencia probada <em>en 8 países</em></span><span class="en">Proven presence <em>in 8 countries</em></span></h2></div>
+    <div class="exp-nums r r1">
+      <div class="exp-num-item"><div class="exp-big">+20</div><div class="exp-num-label"><span class="es">Proyectos completados</span><span class="en">Completed projects</span></div></div>
+      <div class="exp-num-item"><div class="exp-big">8</div><div class="exp-num-label"><span class="es">Países · 3 continentes</span><span class="en">Countries · 3 continents</span></div></div>
+      <div class="exp-num-item"><div class="exp-big">220<span>kV</span></div><div class="exp-num-label"><span class="es">Tensión máxima certificada</span><span class="en">Maximum certified voltage</span></div></div>
+      <div class="exp-num-item"><div class="exp-big">8</div><div class="exp-num-label"><span class="es">Fabricantes asociados</span><span class="en">Partner manufacturers</span></div></div>
+    </div>
+    <div class="exp-cols r r2">
+      <div>
+        <div class="exp-col-ttl"><span class="es">Fabricantes con los que trabajamos</span><span class="en">Manufacturers we work with</span></div>
+        <div class="fabs"><span class="fab">PFISTERER</span><span class="fab">SUBKABEL</span><span class="fab">TE Connectivity (Raychem/TYCO)</span><span class="fab">ABB</span><span class="fab">NEXANS</span><span class="fab">PRYSMIAN</span><span class="fab">NKT</span><span class="fab">CABELTE</span></div>
+        <div class="exp-col-ttl" style="margin-top:2rem"><span class="es">Presencia internacional</span><span class="en">International presence</span></div>
+        <div class="paises-list">
+          <span class="pais-tag">📍 <span class="es">España</span><span class="en">Spain</span></span>
+          <span class="pais-tag">📍 <span class="es">Marruecos</span><span class="en">Morocco</span></span>
+          <span class="pais-tag">📍 Senegal</span>
+          <span class="pais-tag">📍 <span class="es">Camerún</span><span class="en">Cameroon</span></span>
+          <span class="pais-tag">📍 <span class="es">Ruanda</span><span class="en">Rwanda</span></span>
+          <span class="pais-tag">📍 Nicaragua</span>
+          <span class="pais-tag">📍 Colombia</span>
+          <span class="pais-tag">📍 <span class="es">Rep. Dominicana</span><span class="en">Dominican Rep.</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="exp-col-ttl"><span class="es">Clientes de referencia</span><span class="en">Reference clients</span></div>
+        <div class="cli-list"><span class="cli">H&amp;MV Engineering</span><span class="cli">ENATREL</span><span class="cli">SOCOCIM Industries</span><span class="cli">OCP Group</span><span class="cli">REPSOL</span><span class="cli">SOLARIAN</span><span class="cli">ELECNOR</span><span class="cli">SARPEL</span><span class="cli">MOTA-ENGIL</span><span class="cli">ELMYA</span><span class="cli">TSK</span><span class="cli">MEGAL</span><span class="cli">CARBONELL FIGUERAS</span><span class="cli">WEG</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <div class="proy-head r">
+      <div><div class="eyebrow"><span class="es">Proyectos recientes</span><span class="en">Recent projects</span></div><h2 class="section-h2"><span class="es">Historial <em>2023–2026</em></span><span class="en">Track record <em>2023–2026</em></span></h2></div>
+      <div class="filters">
+        <button class="fb active" onclick="filt('todos',this)"><span class="es">Todos</span><span class="en">All</span></button>
+        <button class="fb" onclick="filt('espana',this)"><span class="es">España</span><span class="en">Spain</span></button>
+        <button class="fb" onclick="filt('africa',this)"><span class="es">África</span><span class="en">Africa</span></button>
+        <button class="fb" onclick="filt('latam',this)"><span class="es">Latinoamérica</span><span class="en">Latin America</span></button>
+      </div>
+    </div>
+    <div class="proy-grid r r1" id="pg"></div>
+  </div>
+</section>
+
+<section id="galeria-real">
+  <div class="wrap">
+    <div class="gal-intro r">
+      <div class="eyebrow"><span class="es">Galería</span><span class="en">Gallery</span></div>
+      <h2 class="section-h2"><span class="es">Nuestros proyectos <em>en imágenes</em></span><span class="en">Our projects <em>in pictures</em></span></h2>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-top:.6rem"><span class="es">Instalaciones reales ejecutadas por nuestro equipo en subestaciones, tendidos y trabajos de alta tensión en Europa, África y Latinoamérica.</span><span class="en">Real installations carried out by our team on substations, cable pulling and high voltage works across Europe, Africa and Latin America.</span></p>
+    </div>
+    <div class="gal-grid r r1" id="galGrid"></div>
+  </div>
+</section>
+
+<section id="calidad">
+  <div class="wrap">
+    <div class="r"><div class="eyebrow"><span class="es">Calidad · Seguridad · Cumplimiento</span><span class="en">Quality · Safety · Compliance</span></div><h2 class="section-h2"><span class="es">Estándares de <em>operación</em></span><span class="en">Operating <em>standards</em></span></h2></div>
+    <div class="cal-grid r r1">
+      <div class="cal-card">
+        <div class="cal-ttl"><span class="es">Calidad</span><span class="en">Quality</span></div>
+        <ul class="cal-list es"><li>Instaladores certificados por fabricantes con más de 20 años de experiencia</li><li>Procedimientos normalizados de instalación</li><li>Inspección y control de calidad</li><li>Ensayos y verificaciones</li><li>Trazabilidad documental completa</li></ul>
+        <ul class="cal-list en"><li>Manufacturer-certified installers with over 20 years of experience</li><li>Standardised installation procedures</li><li>Inspection and quality control</li><li>Testing and verification</li><li>Full documentary traceability</li></ul>
+      </div>
+      <div class="cal-card">
+        <div class="cal-ttl"><span class="es">Seguridad</span><span class="en">Safety</span></div>
+        <ul class="cal-list es"><li>RAMS — Risk Assessment &amp; Method Statement</li><li>Evaluación de riesgos por proyecto</li><li>Toolbox Talks periódicos en obra</li><li>Permisos de Trabajo (Permit to Work)</li><li>Uso obligatorio de EPIs</li></ul>
+        <ul class="cal-list en"><li>RAMS — Risk Assessment &amp; Method Statement</li><li>Per-project risk assessment</li><li>Regular on-site Toolbox Talks</li><li>Permit to Work system</li><li>Mandatory use of PPE</li></ul>
+      </div>
+      <div class="cal-card">
+        <div class="cal-ttl"><span class="es">Cumplimiento</span><span class="en">Compliance</span></div>
+        <ul class="cal-list es"><li>ISO 9001 — Gestión de la calidad (en implantación)</li><li>ISO 14001 — Gestión ambiental (en implantación)</li><li>ISO 45001 — Seguridad y salud laboral (en implantación)</li><li>Cumplimiento de normativa del cliente</li></ul>
+        <ul class="cal-list en"><li>ISO 9001 — Quality management (being implemented)</li><li>ISO 14001 — Environmental management (being implemented)</li><li>ISO 45001 — Occupational health and safety (being implemented)</li><li>Compliance with client standards</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="cnt-inner r">
+    <div class="eyebrow" style="justify-content:center"><span class="es">Contacto</span><span class="en">Contact</span></div>
+    <h2 class="section-h2" style="text-align:center"><span class="es">¿Hablamos de <em>tu proyecto?</em></span><span class="en">Let's talk about <em>your project</em></span></h2>
+    <p class="cnt-sub"><span class="es">Tanto si eres fabricante, contratista EPC o promotor de energías renovables, nuestro equipo técnico está listo para estudiar tu proyecto.</span><span class="en">Whether you are a manufacturer, EPC contractor or renewable energy developer, our technical team is ready to review your project.</span></p>
+    <div class="cnt-cards">
+      <div class="cnt-card"><div class="cnt-role"><span class="es">Departamento Financiero</span><span class="en">Finance Department</span></div><div class="cnt-name">Karem Matheus</div></div>
+      <div class="cnt-card"><div class="cnt-role"><span class="es">Director de Proyectos</span><span class="en">Projects Director</span></div><div class="cnt-name">Adelino Magalhaes</div></div>
+    </div>
+    <a href="mailto:administracion@hvcs.es" class="cnt-email">administracion@hvcs.es</a>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+    <img src="img/logo-simbolo.png" alt="HVCS" class="foot-logo"/>
+    <span class="foot-r" style="color:rgba(255,255,255,.5)">© 2026 High Voltage Cable Systems S.L. — Madrid, <span class="es">España</span><span class="en">Spain</span></span>
+  </div>
+  <div class="foot-r"><span class="es">Media · Alta · Extra Alta Tensión</span><span class="en">Medium · High · Extra High Voltage</span></div>
+</footer>
+
+<div class="modal-ov" id="mOv">
+  <div class="modal">
+    <img id="mImg" alt="" class="modal-img"/>
+    <div class="modal-body">
+      <div class="modal-hdr">
+        <div><div class="modal-title" id="mTitle"></div><div class="modal-loc" id="mLoc"></div></div>
+        <button class="modal-close" id="mClose">✕</button>
+      </div>
+      <div class="modal-fields" id="mFields"></div>
+      <div class="modal-alc" id="mAlc"></div>
+    </div>
+  </div>
+</div>
+
+<div class="lb-ov" id="lbOv">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-prev" id="lbPrev">‹</button>
+  <img class="lb-img" id="lbImg" alt=""/>
+  <button class="lb-next" id="lbNext">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<script>
+/* ============================================================
+   IMAGENES  ·  IMAGES
+   ============================================================ */
+document.getElementById("heroPhoto").style.backgroundImage=`url(img/foto02.jpg)`;
+document.getElementById("aboutImg").src="img/foto03.jpg";
+const RP={r0:"img/foto04.jpg",r1:"img/foto05.jpg",r2:"img/foto06.jpg",r3:"img/foto07.jpg",r4:"img/foto03.jpg",r5:"img/foto08.jpg",r6:"img/foto09.jpg",r7:"img/foto10.jpg",r8:"img/foto11.jpg",r9:"img/foto12.jpg",r10:"img/foto13.jpg",r11:"img/foto14.jpg",r12:"img/foto15.jpg",r13:"img/foto16.jpg",r14:"img/foto17.jpg",r15:"img/foto18.jpg",r16:"img/foto19.jpg",r17:"img/foto20.jpg",r18:"img/foto21.jpg",r19:"img/foto22.jpg"};
+
+/* ============================================================
+   PROYECTOS  ·  PROJECTS
+   Para anadir uno, copia una linea entera y cambia los valores.
+   Los campos que acaban en _en son la version en ingles.
+   reg: solo "espana", "africa" o "latam" (lo usan los filtros).
+   ============================================================ */
+const PROY=[
+  {ano:2023,pais:"Nicaragua",pais_en:"Nicaragua",ciudad:"Managua, Nicaragua",ciudad_en:"Managua, Nicaragua",cliente:"ENATREL",fab:"PFISTERER / ABB",kv:"132 kV",alc:"6 Term GIS + 9 Term Ext.",alc_en:"6 GIS Term. + 9 Outdoor Term.",reg:"latam",img:RP.r4,desc:"Instalación de 6 terminales GIS y 9 terminales exteriores de 132 kV para la red eléctrica nacional de Nicaragua en subestación de alta tensión en Managua.",desc_en:"Installation of 6 GIS terminations and 9 outdoor terminations at 132 kV for Nicaragua's national grid, at a high voltage substation in Managua."},
+  {ano:2024,pais:"Senegal",pais_en:"Senegal",ciudad:"Dakar, Senegal",ciudad_en:"Dakar, Senegal",cliente:"SOCOCIM Industries",fab:"PFISTERER",kv:"132 kV",alc:"12 Term Ext.",alc_en:"12 Outdoor Term.",reg:"africa",img:RP.r3,desc:"Montaje de 12 terminales exteriores de 132 kV para la industria cementera SOCOCIM en Dakar, Senegal.",desc_en:"Assembly of 12 outdoor terminations at 132 kV for the SOCOCIM cement works in Dakar, Senegal."},
+  {ano:2024,pais:"España",pais_en:"Spain",ciudad:"Zaragoza, España",ciudad_en:"Zaragoza, Spain",cliente:"REPSOL",fab:"PFISTERER",kv:"132 kV",alc:"93 Empalmes",alc_en:"93 Joints",reg:"espana",img:RP.r9,desc:"Instalación de 93 empalmes de alta tensión a 132 kV para las instalaciones de REPSOL en Zaragoza. Uno de los proyectos más grandes de empalmes AT en España.",desc_en:"Installation of 93 high voltage joints at 132 kV for REPSOL's facilities in Zaragoza. One of the largest HV jointing projects in Spain."},
+  {ano:2024,pais:"Ruanda",pais_en:"Rwanda",ciudad:"Ruanda, África Central",ciudad_en:"Rwanda, Central Africa",cliente:"MOTA-ENGIL",fab:"PFISTERER",kv:"132 kV",alc:"24 Term GIS",alc_en:"24 GIS Term.",reg:"africa",img:RP.r8,desc:"Instalación de 24 terminales GIS de 132 kV en proyecto de infraestructura eléctrica en Ruanda con MOTA-ENGIL.",desc_en:"Installation of 24 GIS terminations at 132 kV on an electrical infrastructure project in Rwanda with MOTA-ENGIL."},
+  {ano:2025,pais:"Rep. Dominicana",pais_en:"Dominican Rep.",ciudad:"República Dominicana",ciudad_en:"Dominican Republic",cliente:"TSK",fab:"SUBKABEL",kv:"132 kV",alc:"12 Term Ext.",alc_en:"12 Outdoor Term.",reg:"latam",img:RP.r6,desc:"Instalación de 12 terminales exteriores de 132 kV en proyecto de energías renovables en República Dominicana.",desc_en:"Installation of 12 outdoor terminations at 132 kV on a renewable energy project in the Dominican Republic."},
+  {ano:2025,pais:"Colombia",pais_en:"Colombia",ciudad:"Bogotá, Colombia",ciudad_en:"Bogotá, Colombia",cliente:"WEG",fab:"PFISTERER",kv:"132 kV",alc:"12 Term Ext.",alc_en:"12 Outdoor Term.",reg:"latam",img:RP.r7,desc:"Montaje de 12 terminales exteriores de alta tensión a 132 kV en Bogotá, Colombia.",desc_en:"Assembly of 12 high voltage outdoor terminations at 132 kV in Bogotá, Colombia."},
+  {ano:2025,pais:"España",pais_en:"Spain",ciudad:"Astorga, España",ciudad_en:"Astorga, Spain",cliente:"SOLARIAN",fab:"PFISTERER / SUBKABEL",kv:"132 kV",alc:"46 Emp + 24 Term Ext.",alc_en:"46 Joints + 24 Outdoor Term.",reg:"espana",img:RP.r19,desc:"Gran proyecto de energía solar en Astorga, León: 46 empalmes y 24 terminales exteriores de 132 kV para parque fotovoltaico.",desc_en:"Major solar project in Astorga, León: 46 joints and 24 outdoor terminations at 132 kV for a photovoltaic plant."},
+  {ano:2025,pais:"España",pais_en:"Spain",ciudad:"Villameca, España",ciudad_en:"Villameca, Spain",cliente:"SARPEL",fab:"SUBKABEL",kv:"132 kV",alc:"12 Term Ext. + 12 Emp.",alc_en:"12 Outdoor Term. + 12 Joints",reg:"espana",img:RP.r18,desc:"Instalación combinada de 12 terminales exteriores y 12 empalmes de 132 kV en León.",desc_en:"Combined installation of 12 outdoor terminations and 12 joints at 132 kV in León."},
+  {ano:2026,pais:"España",pais_en:"Spain",ciudad:"Alcañiz, España",ciudad_en:"Alcañiz, Spain",cliente:"ELMYA",fab:"SUBKABEL",kv:"132 kV",alc:"6 Term Ext.",alc_en:"6 Outdoor Term.",reg:"espana",img:RP.r16,desc:"Montaje de 6 terminales exteriores de 132 kV en Alcañiz (Teruel) para ELMYA.",desc_en:"Assembly of 6 outdoor terminations at 132 kV in Alcañiz (Teruel) for ELMYA."},
+  {ano:2026,pais:"España",pais_en:"Spain",ciudad:"Zamora, España",ciudad_en:"Zamora, Spain",cliente:"MEGAL",fab:"PFISTERER",kv:"132 kV",alc:"27 Empalmes",alc_en:"27 Joints",reg:"espana",img:RP.r17,desc:"Instalación de 27 empalmes de 132 kV en Zamora para MEGAL en parque eólico.",desc_en:"Installation of 27 joints at 132 kV in Zamora for MEGAL at a wind farm."},
+  {ano:2026,pais:"Camerún",pais_en:"Cameroon",ciudad:"Yaundé, Camerún",ciudad_en:"Yaoundé, Cameroon",cliente:"ELECNOR",fab:"SUBKABEL",kv:"132 kV",alc:"18 Term Ext. tipo GIS",alc_en:"18 GIS-type Outdoor Term.",reg:"africa",img:RP.r0,desc:"18 terminales exteriores tipo GIS de 132 kV en subestación de Yaundé, Camerún, con ELECNOR.",desc_en:"18 GIS-type outdoor terminations at 132 kV at a substation in Yaoundé, Cameroon, with ELECNOR."},
+  {ano:2026,pais:"Marruecos",pais_en:"Morocco",ciudad:"Marruecos",ciudad_en:"Morocco",cliente:"OCP Group",fab:"PFISTERER / TYCO",kv:"66 kV",alc:"6 Term + 3 Emp.",alc_en:"6 Term. + 3 Joints",reg:"africa",img:RP.r2,desc:"6 terminales y 3 empalmes de 66 kV para OCP Group en Marruecos.",desc_en:"6 terminations and 3 joints at 66 kV for OCP Group in Morocco."},
+  {ano:2026,pais:"España",pais_en:"Spain",ciudad:"El Burgo de Ebro, España",ciudad_en:"El Burgo de Ebro, Spain",cliente:"H&MV Engineering",fab:"PFISTERER",kv:"220 kV",alc:"6 Term Ext.",alc_en:"6 Outdoor Term.",reg:"espana",img:RP.r14,desc:"Nuestro proyecto de mayor tensión: 6 terminales exteriores de 220 kV en El Burgo de Ebro (Zaragoza).",desc_en:"Our highest voltage project to date: 6 outdoor terminations at 220 kV in El Burgo de Ebro (Zaragoza)."},
+  {ano:2026,pais:"España",pais_en:"Spain",ciudad:"Huesca, España",ciudad_en:"Huesca, Spain",cliente:"CARBONELL FIGUERAS",fab:"—",kv:"AT",kv_en:"HV",alc:"Supervisión de tendido",alc_en:"Cable pulling supervision",reg:"espana",img:RP.r12,desc:"Supervisión técnica del tendido de cable subterráneo de alta tensión en Huesca, Aragón.",desc_en:"Technical supervision of underground high voltage cable pulling in Huesca, Aragón."}
+];
+
+/* ============================================================
+   GALERIA  ·  GALLERY
+   cls: "" normal, "big", "tall" o "wide" (tamano en el mosaico)
+   ============================================================ */
+const GAL_ITEMS=[
+  {img:RP.r4,  tag:"Subestación 132 kV · Nicaragua",        tag_en:"132 kV substation · Nicaragua",        cls:"big"},
+  {img:RP.r1,  tag:"Trabajos en altura · Camerún",          tag_en:"Work at height · Cameroon",            cls:"tall"},
+  {img:RP.r11, tag:"Torre 220 kV · España",                 tag_en:"220 kV tower · Spain",                 cls:""},
+  {img:RP.r3,  tag:"Terminales AT · Nicaragua",             tag_en:"HV terminations · Nicaragua",          cls:""},
+  {img:RP.r15, tag:"Detalle terminales · España",           tag_en:"Termination detail · Spain",           cls:"wide"},
+  {img:RP.r9,  tag:"Empalmes MT/AT · España",               tag_en:"MV/HV joints · Spain",                 cls:""},
+  {img:RP.r10, tag:"Instalación 220 kV con grúa · España",  tag_en:"220 kV crane installation · Spain",    cls:""},
+  {img:RP.r0,  tag:"Torre AT · Camerún",                    tag_en:"HV tower · Cameroon",                  cls:""},
+  {img:RP.r14, tag:"Torre 220 kV · España",                 tag_en:"220 kV tower · Spain",                 cls:""},
+  {img:RP.r5,  tag:"Caja puesta a tierra",                  tag_en:"Earthing link box",                    cls:""},
+  {img:RP.r13, tag:"Bobinas CABELTE · España",              tag_en:"CABELTE drums · Spain",                cls:"wide"},
+  {img:RP.r16, tag:"Empalmes zanja · España",               tag_en:"Joints in trench · Spain",             cls:""},
+  {img:RP.r6,  tag:"Subestación exterior · Colombia",       tag_en:"Outdoor substation · Colombia",        cls:""},
+  {img:RP.r2,  tag:"Base torre ductos · Camerún",           tag_en:"Tower base ducts · Cameroon",          cls:""},
+  {img:RP.r18, tag:"Empalmes en ejecución · España",        tag_en:"Jointing in progress · Spain",         cls:""},
+  {img:RP.r19, tag:"Preparación empalmes",                  tag_en:"Joint preparation",                    cls:""},
+  {img:RP.r17, tag:"Bobinas supervisión tendido",           tag_en:"Drums · pulling supervision",          cls:""},
+  {img:RP.r12, tag:"Bobinas campo · España",                tag_en:"Drums on site · Spain",                cls:""},
+  {img:RP.r7,  tag:"Subestación · Colombia",                tag_en:"Substation · Colombia",                cls:""},
+  {img:RP.r8,  tag:"Subestación · Nicaragua",               tag_en:"Substation · Nicaragua",               cls:""}
+];
+
+/* ============================================================
+   IDIOMA  ·  LANGUAGE
+   ============================================================ */
+const TXT={
+  es:{titulo:"High Voltage Cable Systems | Instalación de Alta Tensión · Madrid",
+      meta:"Especialistas en montaje e instalación de sistemas de cable de Media, Alta y Extra Alta Tensión hasta 220 kV.",
+      ano:"Año",pais:"País",fab:"Fabricante",tension:"Tensión",alcance:"Alcance del proyecto",ver:"Ver detalle →"},
+  en:{titulo:"High Voltage Cable Systems | High Voltage Installation · Madrid",
+      meta:"Specialists in the assembly and installation of Medium, High and Extra High Voltage cable systems up to 220 kV.",
+      ano:"Year",pais:"Country",fab:"Manufacturer",tension:"Voltage",alcance:"Project scope",ver:"View details →"}
+};
+function lang(){ return document.documentElement.lang==="en" ? "en" : "es"; }
+// Devuelve el campo en el idioma actual, y cae al espanol si falta la traduccion
+function L(o,k){ const l=lang(); return (l==="en" && o[k+"_en"]) ? o[k+"_en"] : o[k]; }
+function t(k){ return TXT[lang()][k]; }
+
+function setLang(l){
+  document.documentElement.lang = l;
+  try{ localStorage.setItem("hvcs-lang", l); }catch(e){}
+  document.getElementById("langEs").classList.toggle("active", l==="es");
+  document.getElementById("langEn").classList.toggle("active", l==="en");
+  document.title = t("titulo");
+  const m = document.querySelector('meta[name="description"]');
+  if(m) m.setAttribute("content", t("meta"));
+  renderProy(curReg);
+  renderGal();
+}
+
+/* ============================================================
+   GALERIA
+   ============================================================ */
+function renderGal(){
+  document.getElementById("galGrid").innerHTML=GAL_ITEMS.map((item,i)=>`
+    <div class="gal-item ${item.cls}" onclick="openLb(${i})">
+      <img src="${item.img}" alt="${L(item,'tag')}" loading="lazy"/>
+      <div class="gal-item-over"><span class="gal-item-tag">${L(item,'tag')}</span></div>
+    </div>`).join("");
+}
+
+/* LIGHTBOX */
+let lbIdx=0;
+function openLb(i){ lbIdx=i; updateLb(); document.getElementById("lbOv").classList.add("open"); document.body.style.overflow="hidden"; }
+function updateLb(){
+  document.getElementById("lbImg").src=GAL_ITEMS[lbIdx].img;
+  document.getElementById("lbImg").alt=L(GAL_ITEMS[lbIdx],'tag');
+  document.getElementById("lbCounter").textContent=(lbIdx+1)+" / "+GAL_ITEMS.length;
+}
+function closeLb(){ document.getElementById("lbOv").classList.remove("open"); document.body.style.overflow=""; }
+document.getElementById("lbClose").addEventListener("click",closeLb);
+document.getElementById("lbPrev").addEventListener("click",()=>{lbIdx=(lbIdx-1+GAL_ITEMS.length)%GAL_ITEMS.length;updateLb();});
+document.getElementById("lbNext").addEventListener("click",()=>{lbIdx=(lbIdx+1)%GAL_ITEMS.length;updateLb();});
+document.getElementById("lbOv").addEventListener("click",function(e){if(e.target===this)closeLb();});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){closeLb();closeM();}
+  const abierto=document.getElementById("lbOv").classList.contains("open");
+  if(e.key==="ArrowLeft"&&abierto){lbIdx=(lbIdx-1+GAL_ITEMS.length)%GAL_ITEMS.length;updateLb();}
+  if(e.key==="ArrowRight"&&abierto){lbIdx=(lbIdx+1)%GAL_ITEMS.length;updateLb();}
+});
+
+/* ============================================================
+   PROYECTOS
+   ============================================================ */
+let curReg="todos";
+function renderProy(reg){
+  curReg=reg;
+  const list = reg==="todos" ? PROY : PROY.filter(p=>p.reg===reg);
+  document.getElementById("pg").innerHTML=list.map(p=>{
+    const ri=PROY.indexOf(p);
+    return `<div class="pc" onclick="openM(${ri})">
+      <div class="pc-img-wrap">
+        <img class="pc-img" src="${p.img}" alt="${p.cliente}" loading="lazy"/>
+        <div class="pc-year">${p.ano}</div><div class="pc-kv">${L(p,'kv')}</div>
+      </div>
+      <div class="pc-body">
+        <div class="pc-loc">📍 ${L(p,'ciudad')}</div>
+        <div class="pc-cliente">${p.cliente}</div>
+        <div class="pc-fab">${t('fab')}: ${p.fab}</div>
+        <div class="pc-alcance">${L(p,'alc')}</div>
+        <div class="pc-hint">${t('ver')}</div>
+      </div>
+    </div>`;}).join("");
+}
+function filt(reg,btn){ document.querySelectorAll(".fb").forEach(b=>b.classList.remove("active")); btn.classList.add("active"); renderProy(reg); }
+
+function openM(i){
+  const p=PROY[i];
+  document.getElementById("mImg").src=p.img;
+  document.getElementById("mImg").alt=p.cliente;
+  document.getElementById("mTitle").textContent=p.cliente;
+  document.getElementById("mLoc").textContent="📍 "+L(p,'ciudad');
+  document.getElementById("mFields").innerHTML=
+    `<div class="mfield"><div class="mf-l">${t('ano')}</div><div class="mf-v">${p.ano}</div></div>`+
+    `<div class="mfield"><div class="mf-l">${t('pais')}</div><div class="mf-v">${L(p,'pais')}</div></div>`+
+    `<div class="mfield"><div class="mf-l">${t('fab')}</div><div class="mf-v">${p.fab}</div></div>`+
+    `<div class="mfield"><div class="mf-l">${t('tension')}</div><div class="mf-v mf-gold">${L(p,'kv')}</div></div>`;
+  document.getElementById("mAlc").innerHTML=
+    `<div class="mf-l">${t('alcance')}</div><div class="mf-v">${L(p,'alc')}</div>`+
+    `<div class="modal-desc" style="margin-top:.6rem">${L(p,'desc')}</div>`;
+  document.getElementById("mOv").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeM(){ document.getElementById("mOv").classList.remove("open"); document.body.style.overflow=""; }
+document.getElementById("mClose").addEventListener("click",closeM);
+document.getElementById("mOv").addEventListener("click",function(e){if(e.target===this)closeM();});
+
+/* APARICION AL HACER SCROLL */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("v");obs.unobserve(e.target);}});},{threshold:0.06});
+document.querySelectorAll(".r").forEach(el=>obs.observe(el));
+
+/* NAV */
+const allS=document.querySelectorAll("section[id]");
+const navAs=document.querySelectorAll(".nav-links a[data-s]");
+window.addEventListener("scroll",()=>{
+  document.getElementById("nav").classList.toggle("scrolled",window.scrollY>20);
+  let c="";allS.forEach(s=>{if(window.scrollY>=s.offsetTop-110)c=s.id;});
+  navAs.forEach(a=>a.classList.toggle("active",a.dataset.s===c));
+},{passive:true});
+
+document.getElementById("hbg").addEventListener("click",()=>document.getElementById("mob").classList.toggle("open"));
+function cMob(){document.getElementById("mob").classList.remove("open");}
+
+/* ARRANQUE: idioma guardado > idioma del navegador > espanol */
+(function(){
+  let l=null;
+  try{ l=localStorage.getItem("hvcs-lang"); }catch(e){}
+  if(l!=="es"&&l!=="en"){ l=(navigator.language||"es").toLowerCase().startsWith("en")?"en":"es"; }
+  setLang(l);
+})();
+</script>
+</body>
+</html>
